@@ -7,8 +7,10 @@
     <artifactId>my-java-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>design-pattern</artifactId>
-  <name>design-pattern</name>
+  <groupId>my.java</groupId>
+  <artifactId>framework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>framework</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,6 +25,6 @@
   </dependencies>
   <packaging>pom</packaging>
   <modules>
-  	<module>creational-design-pattern</module>
+  	<module>apache-lucene</module>
   </modules>
 </project>

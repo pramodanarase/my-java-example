@@ -24,5 +24,7 @@
   </dependencies>
   <modules>
     <module>design-pattern</module>
+    <module>threading</module>
+    <module>framework</module>
   </modules>
 </project>

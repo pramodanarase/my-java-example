@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>my.java</groupId>
-    <artifactId>design-pattern</artifactId>
+    <artifactId>creational-design-pattern</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>my.java</groupId>
-  <artifactId>factory-design-pattern</artifactId>
+  <artifactId>factory-pattern</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>factory-design-pattern</name>
+  <name>factory-pattern</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -4,11 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>my.java</groupId>
-    <artifactId>my-java-example</artifactId>
+    <artifactId>framework</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>design-pattern</artifactId>
-  <name>design-pattern</name>
+  <groupId>my.java</groupId>
+  <artifactId>apache-lucene</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>apache-lucene</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,8 +23,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <packaging>pom</packaging>
-  <modules>
-  	<module>creational-design-pattern</module>
-  </modules>
 </project>

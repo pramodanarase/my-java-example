@@ -4,11 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>my.java</groupId>
-    <artifactId>my-java-example</artifactId>
+    <artifactId>design-pattern</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>design-pattern</artifactId>
-  <name>design-pattern</name>
+  <groupId>my.java</groupId>
+  <artifactId>creational-design-pattern</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>creational-design-pattern</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,6 +25,6 @@
   </dependencies>
   <packaging>pom</packaging>
   <modules>
-  	<module>creational-design-pattern</module>
+  	<module>factory-pattern</module>
   </modules>
 </project>
