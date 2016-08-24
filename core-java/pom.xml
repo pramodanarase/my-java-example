@@ -5,24 +5,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>my.java</groupId>
-		<artifactId>framework</artifactId>
+		<artifactId>my-java-example</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>my.java</groupId>
-	<artifactId>apache-lucene</artifactId>
+	<artifactId>core-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>apache-lucene</name>
+	<name>core-java</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
-		<dependency>
-			<groupId>org.apache.lucene</groupId>
-			<artifactId>lucene-core</artifactId>
-			<version>6.1.0</version>
-		</dependency>
-
-	</dependencies>
 </project>
