@@ -43,7 +43,7 @@
 						<phase>generate-resources</phase>
 						<configuration>
 							<nodeVersion>v6.10.0</nodeVersion>
-							<npmVersion>3.10.10cd</npmVersion>
+							<npmVersion>3.10.10</npmVersion>
 						</configuration>
 					</execution>
 
