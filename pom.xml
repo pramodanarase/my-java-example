@@ -30,5 +30,7 @@
     <module>framework</module>
     <module>spring</module>
     <module>core-java</module>
+    <module>angular2-demo</module>
+    <module>exception</module>
   </modules>
 </project>

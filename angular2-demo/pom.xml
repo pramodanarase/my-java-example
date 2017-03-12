@@ -42,8 +42,8 @@
 						</goals>
 						<phase>generate-resources</phase>
 						<configuration>
-							<nodeVersion>v4.6.0</nodeVersion>
-							<npmVersion>2.15.9</npmVersion>
+							<nodeVersion>v6.10.0</nodeVersion>
+							<npmVersion>3.10.10cd</npmVersion>
 						</configuration>
 					</execution>
 
@@ -67,9 +67,16 @@
 						</configuration>
 					</execution>
 
-					<!-- <execution> <id>bower install</id> <goals> <goal>bower</goal> </goals> 
-						<configuration> <arguments>install</arguments> </configuration> </execution> -->
-
+					<execution>
+						<id>webpack build</id>
+						<goals>
+							<goal>webpack</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<arguments>-p</arguments>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 
