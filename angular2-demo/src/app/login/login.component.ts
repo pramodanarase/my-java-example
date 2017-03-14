@@ -1,31 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
- 
- 
+import { Component } from '@angular/core';
+
+
+
+
 @Component({
-    templateUrl: 'login.component.html'
+      templateUrl: 'login.component.html'
 })
- 
-export class LoginComponent implements OnInit {
-    model: any = {};
-    loading = false;
-    returnUrl: string;
- 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router,
 
-) { }
- 
-    ngOnInit() {
-        // reset login status
+export class LoginComponent {
 
- 
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    }
- 
-    login() {
-        this.loading = true;
-    }
 }
