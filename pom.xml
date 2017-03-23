@@ -33,6 +33,8 @@
     <module>angular2-demo</module>
     <module>exception</module>
     <module>jersey-rest-server</module>
-    </modules>
+    <module>regular-expression</module>
+    <module>jpa-hibernate</module>
+  </modules>
     
 </project>
