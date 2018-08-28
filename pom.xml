@@ -35,6 +35,8 @@
     <module>jersey-rest-server</module>
     <module>regular-expression</module>
     <module>jpa-hibernate</module>
+    <module>ds-algo</module>
+    <module>system-design</module>
   </modules>
     
 </project>
