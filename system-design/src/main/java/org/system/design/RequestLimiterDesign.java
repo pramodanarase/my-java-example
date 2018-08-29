@@ -102,6 +102,7 @@ class RateLimiter {
 		// runnable, initdelay, period, timeout
 		final Runnable task = new Runnable() {
 			public void run() {
+				//release all acquired permits
 				semaphore.release(maxPermits - semaphore.availablePermits());
 			}
 		};
