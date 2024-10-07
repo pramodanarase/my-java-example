@@ -7,6 +7,11 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
+import java.time.format.TextStyle;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Locale;
+import java.util.Random;
 
 public class FileHandling {
     //patterns
@@ -26,12 +31,11 @@ public class FileHandling {
         LocalDate startDate = LocalDate.of(year, startingMonth, 1);
 
         // Iterate over the next 12 months
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 4; i++) {
             LocalDate currentDate = startDate.plusMonths(i);
-            System.out.println(currentDate.format(DateTimeFormatter.ofPattern("MMMM yyyy")));
             String output = updateContent(content, currentDate);
-            System.out.println(output);
             writeToFile(output, currentDate);
+            System.out.println(currentDate.format(DateTimeFormatter.ofPattern("MMMM yyyy")));
         }
 
     }
@@ -64,8 +68,33 @@ public class FileHandling {
 
     public String updateContent(String content, LocalDate currentDate) {
         String result = content;
-        //
-
+        //Invoice No. : TG-B1-55655509
+        Random random = new Random();
+        int randomNumber = 10000000 + random.nextInt(90000000);
+        result = result.replace("TG-B1-55655509", "TG-B1-"+randomNumber);
+        //Billing period: <text>Sep, </text>2021
+        String month = currentDate.getMonth().getDisplayName(TextStyle.SHORT, Locale.ENGLISH);
+        int year = currentDate.getYear();
+        result = result.replace("<text>Sep, </text>2021", "<text>"+month+", </text>"+year);
+        //invoice date: 01/09/2021
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String startOfMonth = currentDate.withDayOfMonth(1).format(formatter);
+        result = result.replaceAll("01/09/2021", startOfMonth);
+        //due date : 10/09/2021
+        String tenthDay = currentDate.withDayOfMonth(10).format(formatter);
+        result = result.replaceAll("10/09/2021", tenthDay);
+        // invoice todate: 30/09/2021
+        String lastDayOfMonth = currentDate.with(TemporalAdjusters.lastDayOfMonth()).format(formatter);
+        result = result.replaceAll("30/09/2021", lastDayOfMonth);
+        //days : >30<text> days</text>
+        int days = currentDate.lengthOfMonth();
+        result = result.replace(">30<text> days</text>", ">"+days+"<text> days</text>");
+        //ref number: P1-33845719
+        int randRef = 10000000 + random.nextInt(90000000);
+        result = result.replace("P1-33845719", "P1-"+ randRef);
+        // txn date: 17/08/2021
+        String lastMonthTenth = currentDate.minusMonths(1).withDayOfMonth(10).format(formatter);
+        result = result.replaceAll("17/08/2021", lastMonthTenth);
         return result;
     }
 
