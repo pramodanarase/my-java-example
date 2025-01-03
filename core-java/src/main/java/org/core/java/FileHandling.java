@@ -25,13 +25,13 @@ public class FileHandling {
 
         //itearate over month
         int year = 2024; // Example year
-        Month startingMonth = Month.APRIL; // Example month
+        Month startingMonth = Month.OCTOBER; // Example month
 
         // Starting date
         LocalDate startDate = LocalDate.of(year, startingMonth, 1);
 
         // Iterate over the next 12 months
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 3; i++) {
             LocalDate currentDate = startDate.plusMonths(i);
             String output = updateContent(content, currentDate);
             writeToFile(output, currentDate);
